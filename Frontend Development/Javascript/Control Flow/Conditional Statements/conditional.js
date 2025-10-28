@@ -78,10 +78,10 @@ if (age <= 12 || age > 65) {
 }
 
 // Login System
-let username = "Emeka";
+let username = "";
 let password = "";
 
-if (username == "Emeka" && password == "random") {
+if (username === "admin" && password === "admin123") {
   console.log("Admin logged in");
 } else if (username === "") {
   console.log("Username required");
@@ -90,33 +90,37 @@ if (username == "Emeka" && password == "random") {
 }
 
 // Season Detector
-// let month = 2;
+let month = [];
 
-// switch (month) {
-//   case 1:
-//     console.log("Winter");
-//   case 2:
-//     console.log("Winter");
-//   case 3:
-//     console.log("Spring");
-//   case 4:
-//     console.log("Spring");
-//   case 5:
-//     console.log("Spring");
-//   case 6:
-//     console.log("Summer");
-//   case 7:
-//     console.log("Summer");
-//   case 8:
-//     console.log("Summer");
-//   case 9:
-//     console.log("Fall");
-//   case 10:
-//     console.log("Fall");
-//   case 11:
-//     console.log("Fall");
-//   case 12:
-//     console.log("Winter");
-// }
+for (i = 1; i <= 12; i++) {
+  month.push(i);
+}
+
+// console.log(month);
+const currentMonth = month[5];
+
+switch (currentMonth) {
+  case 12 || 1 || 2:
+    console.log("Winter");
+    break;
+  case 3 || 4 || 5:
+    console.log("Spring");
+    break;
+  case 6 || 7 || 8:
+    console.log("Summer");
+    break;
+  case 9 || 10 || 11:
+    console.log("Fall");
+    break;
+}
 
 // Leap Year Checker
+let newYear = 2028;
+
+if (newYear % 4 == 0) {
+  console.log("Leap year");
+} else if (newYear % 100 !== 0) {
+  console.log("Not a leap year");
+} else if (newYear % 400 == 0) {
+  console.log("Leap Year");
+}
